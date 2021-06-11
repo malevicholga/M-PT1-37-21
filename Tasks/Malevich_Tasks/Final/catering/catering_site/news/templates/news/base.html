@@ -1,0 +1,33 @@
+{% load static %}
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/swiper/swiper-bundle.min.css"
+    />
+    <link rel="stylesheet" href="{% static 'news/css/index.css' %}" />
+    <script src="{% static 'news/js/swiper-bundle.min.js' %}" defer></script>
+    <script src="{% static 'news/js/main.js' %}" defer></script>
+    <title>{% block title %}Кейтеринг{% endblock %}</title>
+  </head>
+  <body>
+
+    {% include 'news/inc/_header.html' %}
+
+    {% block slider %}{% endblock %}
+    {% block section_line %}{% endblock %}
+    {% block section_about %}{% endblock %}
+    {% block section_line_two %}{% endblock %}
+    {% block section_playground %}{% endblock %}
+    {% block section_common %}{% endblock %}
+    {% block section_banner %}{% endblock %}
+ 
+    {% include 'news/inc/_footer.html' %}
+
+   </body>
+</html>

@@ -1,0 +1,25 @@
+{% load static %}
+
+<header class="header">
+      <div class="header__container">
+        <a href="{% url 'home' %}" class="header__logo"><img src="{% static 'news/img/Logo.png' %}" alt="logo" class="header__logo-img" /></a>
+        <div class="header_menu menu">
+          <div class="menu__icon">
+            <span></span>
+          </div>
+          <div class="wr-insta-ru">
+            <ul class="languges-list">
+              <li class="languages-item active">Ru</li>
+              <li class="languages-item">Eng</li>
+            </ul>
+          </div>
+
+          {% include 'news/inc/_nav.html' %}
+          
+        </div>
+        <button class="btn-angles btn-effect-border draw">
+          <span class="top-width"></span>
+          <span class="bottom-width"></span>Оставить заявку
+        </button>
+      </div>
+</header>

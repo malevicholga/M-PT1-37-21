@@ -1,0 +1,27 @@
+{% load static %}
+
+<section class="section-common">
+    {% for item in product %}
+      <div class="container">
+        <div class="wr-bloks-common">
+          <div class="block-common">
+            <div class="wr-text-common">
+              <img
+                class="img-wr-block" src="{{ item.photo.url }}" alt="image" />
+              <h3 class="title-description">
+                <span class="top-width"></span>
+                <span class="bottom-width"></span>
+                {{ item.title }} {{ item.weidht }} 
+              </h3>
+            </div>
+            <button class="btn-angles btn-effect-border draw">
+              <span class="top-width"></span>
+              <span class="bottom-width"></span>Просмотреть меню
+            </button>
+          </div>
+          
+          </div>
+        </div>
+      </div>
+    {% endfor %}  
+</section>

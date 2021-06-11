@@ -1,0 +1,21 @@
+{% load static %}
+
+<footer class="footer">
+      <div class="container">
+        <a href="{% url 'home' %}" class="header__logo"><img src="{% static 'news/img/Logo.png' %}" alt="logo" class="header__logo-img" /></a>
+        <div class="block-moddle-footer">
+          <a href="#" class="link__insta">
+            <img src="{% static 'news/img/header/Instagram.png' %}" alt="#" class="img-insta" />
+          </a>
+          <p class="text-middle-footer">
+            © 2021 Кейтеринг. Все права защищены.
+          </p>
+        </div>
+        <div class="footer-contact">
+          <p>г. Минск, ул. Минская, 666</p>
+          <p>
+            <a href="tel:(17) 222-64-93">Телефон: +375 (29) 111-22-33</a>
+          </p>          
+        </div>
+      </div>
+</footer>

@@ -1,0 +1,43 @@
+{% extends 'news/base_v.html' %}
+{% load static %}
+
+<title>{% block title %}Кейтеринг{% endblock %}</title>
+{% block section_description %}
+{% include 'news/main/section-description.html' %}
+{% endblock %}
+
+<div>
+    <div class="menu__list">
+      {% for item in categories %}
+        <a href="{% url 'category' item.pk %}">{{ item.title }}</a>
+      {% endfor %}
+    </div>
+</div>    
+
+{% block section_common %}
+<section class="section-common">
+    {% for item in product %}
+      <div class="container">
+        <div class="wr-bloks-common">
+          <div class="block-common">
+            <div class="wr-text-common">
+              <img
+                class="img-wr-block" src="{{ item.photo.url }}" alt="image" />
+              <h3 class="title-description">
+                <span class="top-width"></span>
+                <span class="bottom-width"></span>
+                {{ item.title }}
+              </h3>
+            </div>
+            {% comment %} <a class="btn-angles btn-effect-border draw">
+              <span class="top-width"></span>
+              <span class="bottom-width"></span>Просмотреть меню
+            </a> {% endcomment %}
+          </div>
+          
+          </div>
+        </div>
+      </div>
+    {% endfor %}  
+</section>
+{% endblock %}

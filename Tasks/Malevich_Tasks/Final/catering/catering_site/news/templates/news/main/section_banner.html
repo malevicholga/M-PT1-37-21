@@ -1,0 +1,21 @@
+{% load static %}
+
+<section class="section-promo">
+    {% for item in news %}
+      <div class="banner sweet">
+        <img src="{{ item.photo.url }}" alt="image" />
+         <div class="wr-text-banner">
+          <div class="wr-text">
+            <span class="top-width"></span>
+            <span class="bottom-width"></span>
+            <h3 class="title-banner">{{ item.title }}</h3>
+            <p class="text-banner">{{ item.content }}</p>
+          </div>
+          <button class="btn-angles btn-effect-border draw">
+            <span class="top-width"></span>
+            <span class="bottom-width"></span>Содержимое бокса
+          </button>
+        </div>
+      </div>
+    {% endfor %}  
+</section>
